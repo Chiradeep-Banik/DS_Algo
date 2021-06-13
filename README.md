@@ -5,3 +5,5 @@
 ### Resourses I am using are 
 - Giraffe Academy : Youtube 1hr js video.
 - Loganford Academy : Youtube playlist.
+
+### Goal is to complete the hackerrank Interview Preparation Kit. - ["IPK"](https://www.hackerrank.com/interview/interview-preparation-kit)
