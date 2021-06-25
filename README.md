@@ -10,3 +10,7 @@
 - The hackerrank Interview Preparation Kit. - ["IPK"](https://www.hackerrank.com/interview/interview-preparation-kit)
 - Love Babbar 450 question - ["Problems"](https://github.com/Chiradeep-Banik/DS_Algo_Using_JS/blob/main/FINAL450.xlsx)
 - Anuj Bhaiya checklist -["List"](https://docs.google.com/document/d/1yYRdJ_P6RS0I8JNN6mtjDQBdwLHkhQXCq41whBQNu1Y/edit?usp=sharing)
+
+
+### HackerRank Interveiw Prep -- solutions ----
+- WarmUP Questions.["WarmUP](https://github.com/Chiradeep-Banik/DS_Algo_Using_JS/tree/main/HackerRank_WarmUp) 
