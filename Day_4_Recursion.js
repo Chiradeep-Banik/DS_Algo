@@ -9,8 +9,8 @@
 
 //Problem -1 --- For loop like recursion
 
-function for_rec(n){
-    if(0 < n){
+function for_rec(n) {
+    if (0 < n) {
         console.log(n);
         n--;
         for_rec(n);
@@ -23,24 +23,23 @@ for_rec(3);
 
 //Problem -2 --- Sum of all the numbers upto n
 
-function sum(n){
-    if( n == 0 )
+function sum(n) {
+    if (n == 0)
         return 0;
     else
-        return (n + sum(n-1));
+        return (n + sum(n - 1));
 }
-for (let i = 0; i < 3; i++) {
-    console.log("Sum of ",i,"= ",sum(i));
-}
+
+console.log("Sum of ", 5, "= ", sum(5));
+
 
 //Problem -3 --- Finding the sum of --- 1/1^2+1/2^2+1/3^2+..................+1/n^2
 
-function sum_series_1(n){
-    if(n == 1)
+function sum_series_1(n) {
+    if (n == 1)
         return 1;
     else
-        console.log(n,' --- ',(1/n**2));
-        return (1/n**2) + sum_series_1(n-1);
+        return (1 / n ** 2) + sum_series_1(n - 1);
 }
 console.log(sum_series_1(6));
 
@@ -51,3 +50,42 @@ console.log(sum_series_1(6));
  * - if we donot call a smaller part of the function
  * - stack over flow --- when the stack size excides
 */
+
+/**
+ * Helper MEthod recursion -- 
+ *  - We use one outer function that we call 
+ *  - And inside the outer function we have the helper function that is recursive
+ *  
+ * It is used when we need to collect data from the recurssion
+ */
+
+//Problem -4 --- Return the odd numbers
+//Approach -1
+
+function odd_finder_1(arr) {
+    let a = [];
+    function helper(arr) {
+        if (arr.length == 0)
+            return;
+        else
+            if (arr[0] % 2 != 0)
+                a.push(arr[0]);
+        helper(arr.slice(1));
+    }
+    helper(arr);
+    return a;
+}
+console.log(odd_finder_1([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+//Approach -2 
+
+function odd_finder_2(arr) {
+    let a = [];
+    if (arr.length === 0)
+        return;
+    if (arr[0] % 2 !== 0)
+        a.push(arr[0]);
+    a = a.concat(odd_finder_2(arr.slice(1)));
+    return a;
+}
+console.log(odd_finder_2([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
