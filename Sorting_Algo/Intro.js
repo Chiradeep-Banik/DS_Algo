@@ -3,7 +3,7 @@
  *   one of the basic algorithms
  *   Many algos --
  *      -   Bubble sort         |
- *      -   Selection sort      |       Elementary sorting algorithms
+ *      -   Selection sort      |       Elementary sorting algorithms - Time complexity - O(n²)--Space Compexity - O(1)
  *      -   Insertion sort      |
  *      -   Merge Sort
  *      -   Quick Sort
