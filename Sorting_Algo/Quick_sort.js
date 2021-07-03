@@ -13,8 +13,7 @@
  * In the worst case Quick sort degrades to O(n) = n² as we take the smalest or largest element of each arr as pivot
  */
 
-
-var ar = [3,44,38,5,47,15,36,26,27,2,46,4,19,0,3,26,50,48];
+var ar = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
 var count =0;
 function quick_sort(arr){
     if (arr.length < 2){

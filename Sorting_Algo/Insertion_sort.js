@@ -11,7 +11,7 @@
 //[1,2,3,5,4]
 //[1,2,3,5,4]
 //[1,2,3,4,5]
-
+var ar = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
 function insertion_sort(arr){
     var count = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -34,7 +34,7 @@ function insertion_sort(arr){
     console.log(count);
     return arr;
 }
-var ar2 = insertion_sort([3,44,38,5,47,15,36,26,27,2,46,4,19,50,48]);
+var ar2 = insertion_sort(ar);
 console.log(ar2);
 
 //O(n) = n²

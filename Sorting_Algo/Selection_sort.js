@@ -5,6 +5,8 @@
  * - we start at the beggining at i= 0
  * - We find the minimum value after each iteration and put it at the biggening
  */
+
+var ar = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
 function swap(arr, i1, i2) {
     var c = arr[i1];
     arr[i1] = arr[i2];
@@ -33,7 +35,7 @@ function selection_sort_1(arr) {
     return arr;
 }
 
-console.log(selection_sort_1([13, 1, 13, 6, -5, 4, 2, -2]));
+console.log(selection_sort_1(ar));
 //O(n) = n²
 
 //Optimum approach
@@ -52,7 +54,7 @@ function selection_sort_2(arr) {
     return arr;
 }
 
-console.log(selection_sort_2([13, 1, 13, 6, -5, 4, 2, -2]));
+console.log(selection_sort_2(ar));
 //O(n) = n²
 
 
