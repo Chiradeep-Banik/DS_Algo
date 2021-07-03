@@ -4,7 +4,7 @@
 
 ### Resourses I am using are 
 - Giraffe Academy : Youtube 1hr js video.
-- Loganford Academy : Youtube playlist.
+- Colt Steele : Bootcamp
 
 ### Goal is to complete
 - The hackerrank Interview Preparation Kit. - ["IPK"](https://www.hackerrank.com/interview/interview-preparation-kit)
