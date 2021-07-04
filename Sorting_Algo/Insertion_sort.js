@@ -1,6 +1,6 @@
 /**
- * Insertion Sort -- We pick an element and insert it to its correct position in our sortes part
- *                 -- the length of the sortwd part increase after each iteration, from 0 to n
+ * Insertion Sort -- We pick an element and insert it to its correct position in our sortest part
+ *                 -- the length of the sortest part increase after each iteration, from 0 to n
  * 
  *  This sort is great for nearly sorted  data ---- as on this it has almost linear time complexity for that data 
  *  -- It also works best when we keep receiving new data - as we just need to insert it in its correct place. So linear

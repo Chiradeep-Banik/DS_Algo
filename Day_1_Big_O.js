@@ -166,3 +166,9 @@ console.log("Array sum = ", sum_array(ar));
             - input space complexity -- O(n) -- as an array of n elements - 4*n bytes
             - So total space complexity -- O(n) - (8+ 4n)
 */
+
+/**
+ * Big O --- Is the upper bound of the algorithm --- i.e. time taken in the worst case scinerio
+ * Big Ω --- Is the lower bound of the algorithm --- i.e. time taken tin the best case scinerio
+ * Big Θ --- It is the average case scinerio for the algorithm
+ */

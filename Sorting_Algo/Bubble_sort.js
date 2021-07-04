@@ -1,5 +1,5 @@
 /**
- * Bubble sort -- The larger values buble up to the top--
+ * Bubble sort -- The larger values bubble up to the top--
  * We start at the biggining and compare two elemens -- if the first one is larger we swap them--
  * Else we dont and move to the second and thrid element
  * After one loop through the array --- we have the largest no in the last----
