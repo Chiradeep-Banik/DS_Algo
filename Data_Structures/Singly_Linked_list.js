@@ -27,7 +27,8 @@ class singly_linked_list {
         this.tail = null;
         this.length = 0;
     }
-    push(val) {                          //Pushing an element to the last of the linked list
+    push(val) {
+        console.log("Pushing " + val + " to the linked list");                //Pushing an element to the last of the linked list
         var element = new node(val);
         if (this.head == null) {
             this.head = element;
@@ -42,6 +43,7 @@ class singly_linked_list {
     }
 
     pop() {                               // Removing an element from the last of the linked list
+        console.log("Popping the last element of the linked list");
         var element_1 = this.head;
         if (this.head == null) {
             return undefined;
@@ -64,6 +66,7 @@ class singly_linked_list {
     }
 
     shift() {                                    //Removing an element from the first of the linked list
+        console.log("Shifting the first element of the linked list to the next one");
         if (this.length == 0) {
             return undefined;
         }
@@ -79,7 +82,8 @@ class singly_linked_list {
     }
 
     unshift(val) {                         //Adds an element to the first of the linked list
-        if(this.length == 0){
+        console.log("Inserting at the first of the linked list the value " + val);
+        if (this.length == 0) {
             this.push(val);
             return this;
         }
@@ -90,8 +94,9 @@ class singly_linked_list {
         this.head = new_head;
         return this;
     }
-    get_node(index){
-        if (this.head == null || index < 0 || index >= this.length){
+    get_node(index) {                                                  //Getting the node at the index specified
+        console.log("Getting the node at the index " + index);
+        if (this.head == null || index < 0 || index >= this.length) {
             return undefined;
         }
         var current = this.head;
@@ -101,28 +106,30 @@ class singly_linked_list {
         return current;
     }
 
-    set_value(index, value){
-        if(this.head == null || index < 0 || index >= this.length){
+    set_value(index, value) {                                            //Setting the value of the element at the index specified
+        console.log("Setting the value of the element at index " + index);
+        if (this.head == null || index < 0 || index >= this.length) {
             return false;
         }
         var current = this.head;
-        for (let i = 0; i < index; i++){
+        for (let i = 0; i < index; i++) {
             current = current.next;
         }
         current.value = value;
         return true;
     }
 
-    insert(index, value){
-        if(index < 0 || index > this.length){
+    insert(index, value) {
+        console.log("Inserting at index " + index + " the value " + value);  //Inserting at index tha value specifies
+        if (index < 0 || index > this.length) {
             return false;
         }
-        if (index == 0){
+        if (index == 0) {
             this.unshift(value);
             this.tail.next = null;
             return true;
         }
-        if(index == this.length){
+        if (index == this.length) {
             this.push(value);
             return true;
         }
@@ -135,11 +142,12 @@ class singly_linked_list {
         return true;
     }
 
-    delete(index){
-        if (index <0 || index >= this.length){
+    delete(index) {                                                  //Deletest he node at index specified
+        console.log("Deleting the element at index " + index);
+        if (index < 0 || index >= this.length) {
             return false
         }
-        if(index == 0){
+        if (index == 0) {
             this.shift();
             return true;
         }
@@ -150,16 +158,29 @@ class singly_linked_list {
         return true;
     }
 
-    reverse(){
-        console.log("-----");
-    }
-
-    print() {
-        var cur_element = this.head;
-        for(;cur_element != null;cur_element = cur_element.next) {
-            console.log(cur_element.value);
+    reverse() {                                                      //Reversing the linked list
+        console.log("Reversing the linked list");
+        var cur_node = this.head;
+        this.head = this.tail;
+        this.tail = cur_node;
+        var prev_node = null;
+        var next_node = null;
+        while (cur_node != null) {
+            next_node = cur_node.next;
+            cur_node.next = prev_node;
+            prev_node = cur_node;
+            cur_node = next_node;
         }
         return this;
+    }
+
+    print() {                                                      //Printing the linked list
+        var cur_element = this.head;
+        var arr = [];
+        for (; cur_element != null; cur_element = cur_element.next) {
+            arr.push(cur_element.value);
+        }
+        console.log(arr);
     }
 }
 
@@ -171,4 +192,26 @@ list.push(3);
 list.push(4);
 list.push(5);
 
+list.reverse();
+list.print();
+
 console.log(list);
+
+/**
+ * Singly Linked List --- Time comlexities ---
+ *          - Insertion
+ *                  - At the front - O(1) -- unshift()
+ *                  - At the back  - O(1) -- push()
+ *                  - At the middle - O(n) -- insert()
+ *          - Deletion
+ *                  - At the front - O(1) -- shift()
+ *                  - At the back  - O(1) -- pop()
+ *                  - At the middle - O(n) -- delete()
+ *          - Modifiying value
+ *                  - O(n) -- set_value()
+ *          - Searching
+ *                  - O(n) -- get_node()
+ *          - Reversing
+ *                  - O(n) -- reverse()
+ *
+*/
