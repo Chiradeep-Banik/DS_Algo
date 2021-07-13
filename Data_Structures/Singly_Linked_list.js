@@ -205,7 +205,7 @@ console.log(list);
  *                  - At the middle - O(n) -- insert()
  *          - Deletion
  *                  - At the front - O(1) -- shift()
- *                  - At the back  - O(1) -- pop()
+ *                  - At the back  - O(n) -- pop()
  *                  - At the middle - O(n) -- delete()
  *          - Modifiying value
  *                  - O(n) -- set_value()
