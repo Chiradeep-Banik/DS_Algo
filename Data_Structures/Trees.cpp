@@ -110,7 +110,7 @@ int main()
     tree.insert(13);
     tree.insert(8);
 
-    cout << tree.search(13) << endl;
+    cout << tree.search(13) << endl; 
     cout << tree.root->left->left->right->value << endl;
     return 0;
 }
