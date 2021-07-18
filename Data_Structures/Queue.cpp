@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class stack{
+class queue{
     private:
         class node{
             public:
@@ -50,7 +50,7 @@ class stack{
 };
 
 int main(){
-    stack s;
+    queue s;
 
     cout << s.en_queue(1) << endl;
     cout << s.en_queue(2) << endl;
