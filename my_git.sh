@@ -5,7 +5,6 @@ git add -A
 echo Enter you commit message : 
 read message
 git commit -m $message
-git status
 git push
 
 
