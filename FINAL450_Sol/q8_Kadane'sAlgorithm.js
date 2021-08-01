@@ -1,6 +1,5 @@
 var ar = [-1,-2,-3,-4,3,6,7,8];
 
-
 //Brute Force
 var max_sum = null;
 for (var i = 0; i < ar.length; i++) {
