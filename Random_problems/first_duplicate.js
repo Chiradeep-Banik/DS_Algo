@@ -14,44 +14,44 @@
  *      - While looking we only use the abs(value) of the index
 */
 
-var ar = [2,1,3,7,5,3,2];
+var a = [2,1,3,7,5,3,2];
 
-function first_dup_using_space (ar){
+function first_dup_using_space (a){
     var result = -1;
-    for (var i = 0; i < ar.length; i++){
-        if (ar[i] > ar.length && ar[i] >0) return "Invalid Input";
+    for (var i = 0; i < a.length; i++){
+        if (a[i] > a.length && a[i] >0) return "Invalid Input";
     }
     var obj = {};
-    for (var i = 0; i < ar.length; i++){
-        if (obj[ar[i]] > 0) {
-            obj[ar[i]]++;
+    for (var i = 0; i < a.length; i++){
+        if (obj[a[i]] > 0) {
+            obj[a[i]]++;
         }else{
-            obj[ar[i]] = 1;
+            obj[a[i]] = 1;
         }
         if(Object.values(obj).includes(2)){
-            result = ar[i];
+            result = a[i];
             break;
         }
     }
     return result;
 }
-console.log("Using space :",first_dup_using_space(ar));
+console.log("Using space :",first_dup_using_space(a));
 
-function first_dup_without_using_space(ar){
+function first_dup_without_using_space(a){
     var result = -1;
-    for (var i = 0; i < ar.length; i++){
-        if (ar[i] > ar.length && ar[i] >0) return "Invalid Input";
+    for (var i = 0; i < a.length; i++){
+        if (a[i] > a.length && a[i] >0) return "Invalid Input";
     }
 
-    for (let i = 0; i < ar.length; i++) {
-        if(ar[Math.abs(ar[i])-1] > 0){
-            ar[Math.abs(ar[i])-1] = -ar[Math.abs(ar[i])-1];
+    for (let i = 0; i < a.length; i++) {
+        if(a[Math.abs(a[i])-1] > 0){
+            a[Math.abs(a[i])-1] = -a[Math.abs(a[i])-1];
         }else{
-            result = Math.abs(ar[i]);
+            result = Math.abs(a[i]);
             break;
         }
     }
     return result;
 }
 
-console.log("Not using space :",first_dup_without_using_space(ar));
+console.log("Not using space :",first_dup_without_using_space(a));
