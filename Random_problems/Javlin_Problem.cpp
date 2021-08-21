@@ -9,7 +9,7 @@ int main(){
     int t;
     cin>>t;
     while (t){
-        int number_of_players =0,qualification_distance = 0,no_of_players_to_qualify = 0; ; 
+        int number_of_players =0,qualification_distance = 0,no_of_players_to_qualify = 0;
         cin >> number_of_players >> qualification_distance >> no_of_players_to_qualify;
         int players[number_of_players];
         unordered_map<int,int> player_index;
@@ -24,7 +24,7 @@ int main(){
         //5998 5999 6000 6001
         //7998 7999 8000
         for(int j = number_of_players-1;j>=0;j--){
-            if(players[j] > qualification_distance){
+            if(players[j] >= qualification_distance){
                 result.push_back(players[j]);
                 no_of_players_to_qualify--;
             }else{
@@ -36,7 +36,6 @@ int main(){
                 }
             }
         }
-        cout<<result.size()<<endl;
         cout<<result.size();
         for(int k = 0;k<result.size();k++){
             result[k]=player_index[result[k]]+1; 
