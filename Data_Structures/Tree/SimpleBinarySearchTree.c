@@ -61,6 +61,74 @@ void printTree(TreeNode *root)
     printf("------Done------\n");
 }
 
+void printTreeInOrder(TreeNode *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    printTreeInOrder(root->left);
+    printf("%d ", root->data);
+    printTreeInOrder(root->right);
+}
+
+// void printTreeLevelOrder(TreeNode *root){
+//     if(root == NULL){
+//         return;
+//     }
+//     Queue *q = createQueue();
+//     enqueue(q, root);
+//     while(!isEmpty(q)){
+//         TreeNode *temp = dequeue(q);
+//         printf("%d ", temp->data);
+//         if(temp->left != NULL){
+//             enqueue(q, temp->left);
+//         }
+//         if(temp->right != NULL){
+//             enqueue(q, temp->right);
+//         }
+//     }
+// }
+
+int findMin(TreeNode *root)
+{
+    if (root == NULL)
+    {
+        return -1;
+    }
+    TreeNode *temp = root;
+    while (temp->left != NULL)
+    {
+        temp = temp->left;
+    }
+    return temp->data;
+}
+
+int findMax(TreeNode *root)
+{
+    if (root == NULL)
+    {
+        return -1;
+    }
+    TreeNode *temp = root;
+    while (temp->right != NULL)
+    {
+        temp = temp->right;
+    }
+    return temp->data;
+}
+
+int height(TreeNode *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+    int leftHeight = height(root->left);
+    int rightHeight = height(root->right);
+    return ((leftHeight > rightHeight) ? leftHeight : rightHeight) + 1;
+}
+
 void main()
 {
     TreeNode *root = createTree(11);
@@ -68,8 +136,14 @@ void main()
     insertNode(&root, 20);
     insertNode(&root, 30);
     insertNode(&root, 40);
-    insertNode(&root, 50);
+    insertNode(&root, 90);
+    insertNode(&root, 0);
     insertNode(&root, 9);
 
-    printTree(root);
+    printf("Height %d\n", height(root));
+    // printTree(root);
+    printTreeInOrder(root);
+    printf("\n");
+    printf("Min - %d\n", findMin(root));
+    printf("Max - %d\n", findMax(root));
 }
