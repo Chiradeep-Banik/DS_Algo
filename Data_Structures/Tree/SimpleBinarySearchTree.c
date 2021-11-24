@@ -38,7 +38,6 @@ bool insertNode(TreeNode **root, int data)
     }
     if ((*root)->data > data)
     {
-        printf("Going Left\n");
         return insertNode(&(*root)->left, data);
     }
     else
