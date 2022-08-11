@@ -6,9 +6,7 @@ void rev(int left,int right,vector<int> arr){
     if(left>=right){
         return;
     }
-    int temp = arr[left];
-    arr[left] = arr[right];
-    arr[right]= temp;
+    swap(arr[left],arr[right]);
     rev(left+1,right-1,arr);
 }
 
