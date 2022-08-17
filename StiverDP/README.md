@@ -4,5 +4,8 @@
 - Tabulation -> Bottom up approach
 - Memoaization -> Top down approach
 
+    We need to find overlapping sub-problems
+    - We can use memoaization.
+
 
 
